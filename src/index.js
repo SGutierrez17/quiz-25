@@ -3,8 +3,8 @@
  * Declare a const named initialValue and set its value to 10.
  */
 
-let initialValue = 10;
-console.log("[Question # 1]: ",initialValue);
+const initialValue = 10;
+console.log("[Question # 1]: ", initialValue);
 
 /**
  * Question 2
@@ -12,79 +12,78 @@ console.log("[Question # 1]: ",initialValue);
  */
 
 let result = 0;
-console.log("[Question # 2]: ",result);
+console.log("[Question # 2]: ", result);
 
 /**
  * Question 3
  * Using an if statement, check if initialValue is greater than 5. If true, set result to initialValue times 2.
  */
 
-initialValue>5 ? initialValue=2 : 'is false'
-// if(initialValue>5){
-//     initialValue = 2;
-    console.log("[Question # 3]: ",initialValue);
-//}
+//initialValue>5 ? initialValue=2 : 'is false'
+if (initialValue > 5) {
+  result = initialValue * 2;
+  console.log("[Question # 3]: ", initialValue);
+}
 
 /**
  * Question 4
  * Declare an array named numbers containing the first five prime numbers.
  */
 
-let numbers =[2,3,5,7,11];
-console.log("[Question # 4]: ",numbers);
+const numbers = [2, 3, 5, 7, 11];
+console.log("[Question # 4]: ", numbers);
 
 /**
  * Question 5
  * If the fifth value in the numbers array is greater than initialValue, add 5 to result.
  */
 
-numbers[4]>initialValue ? result+=5 : 'is false'
-// if(numbers[4]>initialValue){
-//     result+=5;
-    console.log("[Question # 5]: ",result);
-//}
+//numbers[4] > initialValue ? (result += 5) : "is false";
+if (numbers[4] > initialValue) {
+  result += 5;
+  console.log("[Question # 5]: ", result);
+}
 
 /**
  * Question 6
  * Declare an object named settings with two properties: theme set to "light" and notifications set to true.
  */
 
-let settings = {
-    theme:'Light',
-    notifications:true
-};console.log("[Question # 6]: ",settings);
-
+const settings = {
+  theme: "Light",
+  notifications: true
+};
+console.log("[Question # 6]: ", settings);
 
 /**
  * Question 7
  * Using an if statement, if notifications property is true, add 3 to result.
  */
 
-notifications=true ? result+=3 : 'is false'
-// if(notifications=true){
-//     result+=3;
-    console.log("[Question # 7]: ",result);
-//}
+//notifications = true ? (result += 3) : "is false";
+if (settings.notifications === true) {
+  result += 3;
+  console.log("[Question # 7]: ", result);
+}
 
 /**
  * Question: 8
  * Change the theme property of settings to "dark".
  */
 
-settings.theme= 'dark';
-console.log("[Question # 8]: ",settings);
-
+settings.theme = "dark";
+console.log("[Question # 8]: ", settings);
 
 /**
  * Question: 9
  * If theme property is "dark" and result is less than 30, push the number 13 to the numbers array.
  */
 
-settings.theme==='dark' && result<30 ? numbers.push(13) : 'is false'
-// if(settings.theme==='dark' && result<30){
-//     numbers.push(13)
-// };
-console.log("[Question # 9]: ",numbers);
+//settings.theme === "dark" && result < 30 ? numbers.push(13) : "is false";
+if (settings.theme === "dark" && result < 30) {
+  numbers.push(13);
+}
+console.log("[Question # 9]: ", numbers);
 
 /**
  * Question: 10
@@ -92,7 +91,7 @@ console.log("[Question # 9]: ",numbers);
  */
 
 let index = 4;
-console.log("[Question # 10]: ",index);
+console.log("[Question # 10]: ", index);
 
 /**
  * Question: 11
@@ -100,8 +99,8 @@ console.log("[Question # 10]: ",index);
  */
 
 // numbers[index]===7 ? result*=2 : 'is false'
-if((index === numbers[index]) === 7){
-    result*=2;
+if (numbers[index] === 7) {
+  result *= 2;
 }
 console.log("[Question # 11]: ", result);
 
@@ -110,32 +109,37 @@ console.log("[Question # 11]: ", result);
  * Change the value of index to the first position in the numbers array that has a value of 13.
  */
 
-numbers.reverse();
-console.log("[Question # 12]: ", numbers);
+index = numbers.indexOf(13);
+console.log("[Question # 12]: ", index);
 
 /**
  * Question 13
  * If the index is odd, set notifications property to false.
  */
 
-index % 2 === 1 ? (settings.notifications=false ) : 'false';
-console.log("[Question # 13]: ", settings );
-
+if (index % 2) {
+  settings.notifications = false;
+}
+console.log("[Question # 13]: ", settings);
 
 /**
  * Question 14
  * If the notifications property is false, subtract initialValue from result.
  */
 
-settings.notifications===false ? result=result-initialValue : 'false'
-console.log("[Question # 14]: ", result );
+if (!settings.notifications) {
+  result -= initialValue;
+}
+console.log("[Question # 14]: ", result);
 
 /**
  * Question 15
  * If initialValue minus result is less than 10, add an array containing three zeros to the end of the numbers array.
  */
 
-initialValue-result<10 ? numbers.push(0,0,0) : 'false'
+if (initialValue - result < 10) {
+  numbers.push[(0, 0, 0)];
+}
 console.log("[Question # 15]: ", numbers);
 
 /**
@@ -143,7 +147,9 @@ console.log("[Question # 15]: ", numbers);
  * If the numbers array contains more than 7 elements, update the theme property of settings to "blue".
  */
 
-numbers.length>7 ? settings.theme='blue' : 'false'
+if (numbers.length > 7) {
+  settings.theme = "blue";
+}
 console.log("[Question # 16]: ", settings);
 
 /**
@@ -159,7 +165,9 @@ console.log("[Question # 17]: ", multiplier);
  * If the multiplier is a multiple of initialValue, assign the product of multiplier and result to result.
  */
 
-multiplier%initialValue == 0 ? result=multiplier*result : 'false'
+if (initialValue % multiplier === 0) {
+  result = multiplier * result;
+}
 console.log("[Question # 18]: ", result);
 
 /**
@@ -168,8 +176,8 @@ console.log("[Question # 18]: ", result);
  */
 
 const userData = {
-    name: "Alex",
-    score: result
+  name: "Alex",
+  score: result
 };
 console.log("[Question # 19]: ", userData);
 
@@ -178,7 +186,9 @@ console.log("[Question # 19]: ", userData);
  * If score is greater than 50, add a new property to userData named membership and set its value to "gold".
  */
 
-userData.score > 50 ? userData.memberShip = "gold" : 'false'
+if (userData.score > 50) {
+  userData.membership = "gold";
+}
 console.log("[Question # 20]: ", userData);
 
 /**
@@ -186,7 +196,9 @@ console.log("[Question # 20]: ", userData);
  * If userData name property starts with the letter "A", add 10 to the score property of userData.
  */
 
-userData.name.charAt(0) === "A" ? userData.score += 10 : 'false'
+if (userData.name.startsWith("A")) {
+  userData.score += 10;
+}
 console.log("[Question # 21]: ", userData);
 
 /**
@@ -202,7 +214,9 @@ console.log("[Question # 22]: ", numbers);
  * If the last element of the numbers array is odd, add a hasBonus property to userData and set its value to true.
  */
 
-(numbers.length - 0) % 2 === 1 ? userData.hasBonus = true : 'false'
+if (numbers.length > 0 && numbers[numbers.length - 1] % 2 !== 0) {
+  userData.hasBonus = true;
+}
 console.log("[Question # 23]: ", userData);
 
 /**
@@ -210,7 +224,9 @@ console.log("[Question # 23]: ", userData);
  * If settings.theme is not "red", add 15 to the score property of userData.
  */
 
-settings.theme !== "red" ? userData.score += 15 : 'false'
+if (settings.theme != "red") {
+  userData.score += 15;
+}
 console.log("[Question # 24]: ", userData);
 
 /**
@@ -218,5 +234,7 @@ console.log("[Question # 24]: ", userData);
  * If userData has a hasBonus property and its value is true, set result to the sum of result and the score property of userData.
  */
 
-"hasBonus" in userData && userData.hasBonus === true ? result = result + userData.score : 'false'
+if (userData.hasBonus === "true") {
+  result += userData.score;
+}
 console.log("[Question # 25]: ", result);
