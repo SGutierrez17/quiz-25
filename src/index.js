@@ -22,7 +22,7 @@ console.log("[Question # 2]: ", result);
 //initialValue>5 ? initialValue=2 : 'is false'
 if (initialValue > 5) {
   result = initialValue * 2;
-  console.log("[Question # 3]: ", initialValue);
+  console.log("[Question # 3]: ", result);
 }
 
 /**
@@ -138,7 +138,7 @@ console.log("[Question # 14]: ", result);
  */
 
 if (initialValue - result < 10) {
-  numbers.push[(0, 0, 0)];
+  numbers.push([0, 0, 0]);
 }
 console.log("[Question # 15]: ", numbers);
 
